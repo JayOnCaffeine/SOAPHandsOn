@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://olympics.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://olympics.com" xmlns:intf="http://olympics.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://olympics.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getGameList">
+    <complexType/>
+   </element>
+   <element name="getGameListResponse">
+    <complexType>
+     <sequence>
+      <element name="getGameListReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPlayerDetails">
+    <complexType>
+     <sequence>
+      <element name="gameName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPlayerDetailsResponse">
+    <complexType>
+     <sequence>
+      <element name="getPlayerDetailsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGameInfo">
+    <complexType>
+     <sequence>
+      <element name="gameName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGameInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="getGameInfoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getGameListResponse">
+
+      <wsdl:part element="impl:getGameListResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPlayerDetailsRequest">
+
+      <wsdl:part element="impl:getPlayerDetails" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGameInfoRequest">
+
+      <wsdl:part element="impl:getGameInfo" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGameInfoResponse">
+
+      <wsdl:part element="impl:getGameInfoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGameListRequest">
+
+      <wsdl:part element="impl:getGameList" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPlayerDetailsResponse">
+
+      <wsdl:part element="impl:getPlayerDetailsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Games">
+
+      <wsdl:operation name="getGameList">
+
+         <wsdl:input message="impl:getGameListRequest" name="getGameListRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGameListResponse" name="getGameListResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPlayerDetails">
+
+         <wsdl:input message="impl:getPlayerDetailsRequest" name="getPlayerDetailsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getPlayerDetailsResponse" name="getPlayerDetailsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGameInfo">
+
+         <wsdl:input message="impl:getGameInfoRequest" name="getGameInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGameInfoResponse" name="getGameInfoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="GamesSoapBinding" type="impl:Games">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getGameList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGameListRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGameListResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPlayerDetails">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPlayerDetailsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPlayerDetailsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGameInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGameInfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGameInfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="GamesService">
+
+      <wsdl:port binding="impl:GamesSoapBinding" name="Games">
+
+         <wsdlsoap:address location="http://localhost:8080/SOAPHandsOn/services/Games"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
