@@ -8,9 +8,9 @@
 <LI><A HREF="Input.jsp?method=2" TARGET="inputs"> getEndpoint()</A></LI>
 <LI><A HREF="Input.jsp?method=5" TARGET="inputs"> setEndpoint(java.lang.String)</A></LI>
 <LI><A HREF="Input.jsp?method=10" TARGET="inputs"> getGames()</A></LI>
-<LI><A HREF="Input.jsp?method=15" TARGET="inputs"> getGameList()</A></LI>
-<LI><A HREF="Input.jsp?method=18" TARGET="inputs"> getPlayerDetails(java.lang.String)</A></LI>
-<LI><A HREF="Input.jsp?method=23" TARGET="inputs"> getGameInfo(java.lang.String)</A></LI>
+<LI><A HREF="Input.jsp?method=15" TARGET="inputs"> getGameInfo(java.lang.String)</A></LI>
+<LI><A HREF="Input.jsp?method=20" TARGET="inputs"> getPlayerDetails(java.lang.String)</A></LI>
+<LI><A HREF="Input.jsp?method=25" TARGET="inputs"> getGameList()</A></LI>
 </UL>
 </BODY>
 </HTML>

@@ -4,13 +4,17 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://olympics.com" xmlns="http://www.w3.org/2001/XMLSchema">
-   <element name="getGameList">
-    <complexType/>
-   </element>
-   <element name="getGameListResponse">
+   <element name="getGameInfo">
     <complexType>
      <sequence>
-      <element name="getGameListReturn" type="xsd:string"/>
+      <element name="gameName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGameInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="getGameInfoReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
@@ -28,26 +32,22 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="getGameInfo">
-    <complexType>
-     <sequence>
-      <element name="gameName" type="xsd:string"/>
-     </sequence>
-    </complexType>
+   <element name="getGameList">
+    <complexType/>
    </element>
-   <element name="getGameInfoResponse">
+   <element name="getGameListResponse">
     <complexType>
      <sequence>
-      <element name="getGameInfoReturn" type="xsd:string"/>
+      <element name="getGameListReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
   </schema>
  </wsdl:types>
 
-   <wsdl:message name="getGameListResponse">
+   <wsdl:message name="getGameInfoRequest">
 
-      <wsdl:part element="impl:getGameListResponse" name="parameters">
+      <wsdl:part element="impl:getGameInfo" name="parameters">
 
       </wsdl:part>
 
@@ -61,9 +61,9 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="getGameInfoRequest">
+   <wsdl:message name="getGameListResponse">
 
-      <wsdl:part element="impl:getGameInfo" name="parameters">
+      <wsdl:part element="impl:getGameListResponse" name="parameters">
 
       </wsdl:part>
 
@@ -95,13 +95,13 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    <wsdl:portType name="Games">
 
-      <wsdl:operation name="getGameList">
+      <wsdl:operation name="getGameInfo">
 
-         <wsdl:input message="impl:getGameListRequest" name="getGameListRequest">
+         <wsdl:input message="impl:getGameInfoRequest" name="getGameInfoRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:getGameListResponse" name="getGameListResponse">
+         <wsdl:output message="impl:getGameInfoResponse" name="getGameInfoResponse">
 
        </wsdl:output>
 
@@ -119,13 +119,13 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="getGameInfo">
+      <wsdl:operation name="getGameList">
 
-         <wsdl:input message="impl:getGameInfoRequest" name="getGameInfoRequest">
+         <wsdl:input message="impl:getGameListRequest" name="getGameListRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:getGameInfoResponse" name="getGameInfoResponse">
+         <wsdl:output message="impl:getGameListResponse" name="getGameListResponse">
 
        </wsdl:output>
 
@@ -137,17 +137,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
-      <wsdl:operation name="getGameList">
+      <wsdl:operation name="getGameInfo">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="getGameListRequest">
+         <wsdl:input name="getGameInfoRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="getGameListResponse">
+         <wsdl:output name="getGameInfoResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -173,17 +173,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="getGameInfo">
+      <wsdl:operation name="getGameList">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="getGameInfoRequest">
+         <wsdl:input name="getGameListRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="getGameInfoResponse">
+         <wsdl:output name="getGameListResponse">
 
             <wsdlsoap:body use="literal"/>
 

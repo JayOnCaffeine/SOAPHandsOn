@@ -44,10 +44,10 @@ public class GamesProxy implements com.olympics.Games {
     return games;
   }
   
-  public java.lang.String getGameList() throws java.rmi.RemoteException{
+  public java.lang.String getGameInfo(java.lang.String gameName) throws java.rmi.RemoteException{
     if (games == null)
       _initGamesProxy();
-    return games.getGameList();
+    return games.getGameInfo(gameName);
   }
   
   public java.lang.String getPlayerDetails(java.lang.String gameName) throws java.rmi.RemoteException{
@@ -56,10 +56,10 @@ public class GamesProxy implements com.olympics.Games {
     return games.getPlayerDetails(gameName);
   }
   
-  public java.lang.String getGameInfo(java.lang.String gameName) throws java.rmi.RemoteException{
+  public java.lang.String getGameList() throws java.rmi.RemoteException{
     if (games == null)
       _initGamesProxy();
-    return games.getGameInfo(gameName);
+    return games.getGameList();
   }
   
   

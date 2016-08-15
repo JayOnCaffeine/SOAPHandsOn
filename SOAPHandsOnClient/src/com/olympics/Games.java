@@ -8,7 +8,7 @@
 package com.olympics;
 
 public interface Games extends java.rmi.Remote {
-    public java.lang.String getGameList() throws java.rmi.RemoteException;
-    public java.lang.String getPlayerDetails(java.lang.String gameName) throws java.rmi.RemoteException;
     public java.lang.String getGameInfo(java.lang.String gameName) throws java.rmi.RemoteException;
+    public java.lang.String getPlayerDetails(java.lang.String gameName) throws java.rmi.RemoteException;
+    public java.lang.String getGameList() throws java.rmi.RemoteException;
 }

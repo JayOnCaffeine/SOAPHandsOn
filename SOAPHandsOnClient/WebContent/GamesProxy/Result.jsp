@@ -64,53 +64,53 @@ if(getGames10mtemp == null){
 break;
 case 15:
         gotMethod = true;
-        java.lang.String getGameList15mtemp = GamesProxyid.getGameList();
-if(getGameList15mtemp == null){
+        String gameName_1id=  request.getParameter("gameName18");
+            java.lang.String gameName_1idTemp = null;
+        if(!gameName_1id.equals("")){
+         gameName_1idTemp  = gameName_1id;
+        }
+        java.lang.String getGameInfo15mtemp = GamesProxyid.getGameInfo(gameName_1idTemp);
+if(getGameInfo15mtemp == null){
 %>
-<%=getGameList15mtemp %>
+<%=getGameInfo15mtemp %>
 <%
 }else{
-        String tempResultreturnp16 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(getGameList15mtemp));
+        String tempResultreturnp16 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(getGameInfo15mtemp));
         %>
         <%= tempResultreturnp16 %>
         <%
 }
 break;
-case 18:
+case 20:
         gotMethod = true;
-        String gameName_1id=  request.getParameter("gameName21");
-            java.lang.String gameName_1idTemp = null;
-        if(!gameName_1id.equals("")){
-         gameName_1idTemp  = gameName_1id;
-        }
-        java.lang.String getPlayerDetails18mtemp = GamesProxyid.getPlayerDetails(gameName_1idTemp);
-if(getPlayerDetails18mtemp == null){
-%>
-<%=getPlayerDetails18mtemp %>
-<%
-}else{
-        String tempResultreturnp19 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(getPlayerDetails18mtemp));
-        %>
-        <%= tempResultreturnp19 %>
-        <%
-}
-break;
-case 23:
-        gotMethod = true;
-        String gameName_2id=  request.getParameter("gameName26");
+        String gameName_2id=  request.getParameter("gameName23");
             java.lang.String gameName_2idTemp = null;
         if(!gameName_2id.equals("")){
          gameName_2idTemp  = gameName_2id;
         }
-        java.lang.String getGameInfo23mtemp = GamesProxyid.getGameInfo(gameName_2idTemp);
-if(getGameInfo23mtemp == null){
+        java.lang.String getPlayerDetails20mtemp = GamesProxyid.getPlayerDetails(gameName_2idTemp);
+if(getPlayerDetails20mtemp == null){
 %>
-<%=getGameInfo23mtemp %>
+<%=getPlayerDetails20mtemp %>
 <%
 }else{
-        String tempResultreturnp24 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(getGameInfo23mtemp));
+        String tempResultreturnp21 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(getPlayerDetails20mtemp));
         %>
-        <%= tempResultreturnp24 %>
+        <%= tempResultreturnp21 %>
+        <%
+}
+break;
+case 25:
+        gotMethod = true;
+        java.lang.String getGameList25mtemp = GamesProxyid.getGameList();
+if(getGameList25mtemp == null){
+%>
+<%=getGameList25mtemp %>
+<%
+}else{
+        String tempResultreturnp26 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(getGameList25mtemp));
+        %>
+        <%= tempResultreturnp26 %>
         <%
 }
 break;

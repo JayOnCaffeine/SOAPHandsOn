@@ -10,13 +10,13 @@
       <parameter name="className" value="com.olympics.Games"/>
       <parameter name="wsdlPortType" value="Games"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation xmlns:operNS="http://olympics.com" xmlns:retNS="http://olympics.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGameList" qname="operNS:getGameList" returnQName="retNS:getGameListReturn" returnType="rtns:string" soapAction="">
+      <operation xmlns:operNS="http://olympics.com" xmlns:retNS="http://olympics.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGameInfo" qname="operNS:getGameInfo" returnQName="retNS:getGameInfoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://olympics.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:gameName" type="tns:string"/>
       </operation>
       <operation xmlns:operNS="http://olympics.com" xmlns:retNS="http://olympics.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getPlayerDetails" qname="operNS:getPlayerDetails" returnQName="retNS:getPlayerDetailsReturn" returnType="rtns:string" soapAction="">
         <parameter xmlns:pns="http://olympics.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:gameName" type="tns:string"/>
       </operation>
-      <operation xmlns:operNS="http://olympics.com" xmlns:retNS="http://olympics.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGameInfo" qname="operNS:getGameInfo" returnQName="retNS:getGameInfoReturn" returnType="rtns:string" soapAction="">
-        <parameter xmlns:pns="http://olympics.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:gameName" type="tns:string"/>
+      <operation xmlns:operNS="http://olympics.com" xmlns:retNS="http://olympics.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGameList" qname="operNS:getGameList" returnQName="retNS:getGameListReturn" returnType="rtns:string" soapAction="">
       </operation>
       <parameter name="allowedMethods" value="getPlayerDetails getGameInfo getGameList"/>
 
