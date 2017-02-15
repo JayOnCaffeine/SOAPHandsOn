@@ -1,5 +1,6 @@
 # SOAP hands on
 
+*   SOAP stands for Simple Object Access Protocol
 *   SOAP is a web standard.
 *   SOAP stands for Simple Object Access protocol
 *   SOAP uses HTTP protocol for data transfer. Can use other protocol like SMTP, UDP, etc.
